@@ -23,9 +23,9 @@ use App\Http\Controllers\Web\InfoController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 
@@ -82,6 +82,7 @@ Route::get('/', function () {
 
 
 Route::controller(BlogPagesController::class)->group(function () {
+    Route::get('/', 'showPosts');
     Route::get('posts', 'showPosts')->name('posts');
     Route::get('posts/add', 'createPostsForm')->name('posts.page.create');
     Route::get('posts/{post}', 'showPost')->name('post');

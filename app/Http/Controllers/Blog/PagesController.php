@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+
+
     public function showPosts()
     {
         $posts = Post::all();
